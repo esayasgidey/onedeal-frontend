@@ -1,26 +1,23 @@
 <template>
-  <div class="wrapper">
-    <Header />
-  </div>
+  <Header />
 
   <main>
     <router-view />
-    <footer class="container">
-      <div class="border-top py-3">
-        &copy; How
-        <Refs />
-      </div>
-    </footer>
   </main>
+
+  <Footer />
 </template>
 
 <script>
 import Header from "../components/Header.vue";
 
+import Footer from "../components/Footer.vue";
+
 export default {
   name: "MainLayout",
   components: {
     Header,
+    Footer,
   },
 };
 </script>

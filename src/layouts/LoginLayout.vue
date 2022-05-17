@@ -1,5 +1,5 @@
 <template>
-  <main class="container flex-shrink-0 mb-4">
+  <main>
     <router-view />
   </main>
 </template>
@@ -14,10 +14,9 @@ export default {
 
 
 <style>
-@import "../assets/base.css";
+/* @import "../assets/base.css"; */
 
-#app {
-  /* max-width: 1280px; */
+/* #app {
   margin: 0 auto;
   width: 100%;
   padding: 2rem;
@@ -54,10 +53,7 @@ body {
 
 #app {
   padding: 0%;
-  display: flex;
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
-  /* padding: 0 2rem; */
+ 
 }
 
 header {
@@ -74,5 +70,5 @@ header .wrapper {
 
 .logo {
   margin: 0 2rem 0 0;
-}
+} */
 </style>

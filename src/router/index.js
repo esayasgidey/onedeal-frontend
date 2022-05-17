@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "../views/Home.vue";
+import Collection from "../views/Collection.vue";
+import DealAlert from "../views/DealAlert.vue";
 
 import Login from "../views/login/Login.vue";
 import SignUp from "../views/login/SignUp.vue";
@@ -15,8 +17,20 @@ export const routes = [
         path: "/",
         name: "Home",
         component: Home,
+        meta: { layout: "MainLayout", showOnHeader: true },
     },
-
+    {
+        path: "/collection",
+        name: "Collection",
+        component: Collection,
+        meta: { layout: "MainLayout", showOnHeader: true },
+    },
+    {
+        path: "/deal-alert",
+        name: "Deal Alert",
+        component: DealAlert,
+        meta: { layout: "MainLayout", showOnHeader: true },
+    },
     {
         path: "/login",
         name: "Login",
@@ -45,7 +59,7 @@ export const routes = [
         path: "/profile",
         name: "Profile",
         component: ProfilePage,
-        meta: { layout: "MainLayout" },
+        meta: { layout: "MainLayout", showOnHeader: true },
     },
     {
         path: "/security",

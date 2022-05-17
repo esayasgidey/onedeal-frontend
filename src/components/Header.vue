@@ -28,7 +28,7 @@
           <div class="col-lg-2 col-md-2">
             <div class="logo">
               <a href="/">
-                <img src="../assets/onedeallogo.png" alt="" />
+                <img src="img/onedeallogo.png" alt="" />
               </a>
             </div>
           </div>
@@ -50,35 +50,58 @@
           <div class="depart-btn">
             <span>All items</span>
             <ul class="depart-hover">
-              <li class="active"><a href="#">Women’s </a></li>
-              <li><a href="#">Men’s Clothing</a></li>
-              <li><a href="#">Cosmotics</a></li>
-              <li><a href="#">Kid's Clothing</a></li>
-              <li><a href="#">Books</a></li>
-              <li><a href="#">HouseHold</a></li>
-              <li><a href="#">Automotive</a></li>
-              <li><a href="#">Commercial Equipment and Tools</a></li>
-              <li><a href="#">Health and Wellness</a></li>
-              <li><a href="#">Holidays</a></li>
-              <li><a href="#">Animal and Pets</a></li>
-              <li><a href="#">Stationary</a></li>
-              <li><a href="#">Food</a></li>
-              <li><a href="#">Sport</a></li>
-              <li><a href="#">School</a></li>
-              <li><a href="#">General</a></li>
+              <li class="active"><a href="#">Clothing</a></li>
+              <li><a href="#">Electronics</a></li>
+              <li><a href="#">Furniture</a></li>
             </ul>
           </div>
         </div>
         <nav class="nav-menu mobile-menu">
           <ul>
-            <li class="active"><a href="./index.html">Home</a></li>
-
-            <li><a href="#">Collection</a></li>
-            <li><a href="./shop.html">Deals Alert</a></li>
-            <li><a href="/profile">Profile</a></li>
+            <li
+              v-for="route in showRoutes"
+              :key="route.path"
+              :class="{ active: isActive(route.path) }"
+            >
+              <router-link :to="route.path" :title="route.name">
+                {{ route.name }}
+              </router-link>
+            </li>
           </ul>
         </nav>
-        <div id="mobile-menu-wrap"></div>
+        <div id="mobile-menu-wrap">
+          <div class="slicknav_menu">
+            <a
+              href="#"
+              aria-haspopup="true"
+              role="button"
+              tabindex="0"
+              class="slicknav_btn slicknav_collapsed"
+              style="outline: none"
+              ><span class="slicknav_menutxt">MENU</span
+              ><span class="slicknav_icon"
+                ><span class="slicknav_icon-bar"></span
+                ><span class="slicknav_icon-bar"></span
+                ><span class="slicknav_icon-bar"></span></span
+            ></a>
+            <nav
+              class="slicknav_nav slicknav_hidden"
+              aria-hidden="true"
+              role="menu"
+              style="display: none"
+            >
+              <ul>
+                <li class="active">
+                  <a href="./index.html" role="menuitem">Home</a>
+                </li>
+
+                <li><a href="./shop.html" role="menuitem">Collection</a></li>
+                <li><a href="./shop.html" role="menuitem">Deals Alert</a></li>
+                <li><a href="./contact.html" role="menuitem">Profile</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -93,38 +116,21 @@ export default {
   setup() {
     const routes = rts;
 
+    console.log(routes);
     const router = useRouter();
+
+    const showRoutes = routes.filter((route) => route.meta.showOnHeader);
+
     const activeRoute = computed(() => router.currentRoute.value.path);
     const isActive = (path) => path === activeRoute.value;
 
-    return { isActive, routes };
+    console.log(showRoutes);
+    return { isActive, showRoutes };
   },
 };
 </script>
 
 <style scoped>
-@import "../assets/home.css";
-
-@import "../assets/themify-icons.css";
-@import "../assets/bootstrap.min.css";
-@import "../assets/elegant-icons.css";
-@import "../assets/font-awesome.min.css";
-@import "../assets/jquery-ui.min.css";
-@import "../assets/nice-select.css";
-@import "../assets/slicknav.min.css";
-#app {
-  margin: 0 auto;
-  padding: 2rem;
-  display: contents;
-  font-weight: normal;
-}
-
-@media (min-width: 1024px) {
-  #app {
-    display: contents;
-    width: 100%;
-  }
-}
 </style>
 
 

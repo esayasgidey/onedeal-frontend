@@ -1,64 +1,50 @@
 <template >
-  <img src="../../assets/onedeallogo.png" class="img" alt="sing up image" />
-  <div class="font-poppins">
-    <!-- <div class="wrapper wrapper--w680"> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card border-0 shadow rounded-3 my-5">
+          <div class="card-body p-4 p-sm-5">
+            <img
+              src="../../assets/onedeallogo.png"
+              class="img"
+              alt="sing up image"
+            />
 
-    <div class="card card-4">
-      <div class="card-body">
-        <h2 class="title">Enter a New Password</h2>
-        <form method="POST">
-          <div class="row row-space">
-            <div class="col-2">
-              <div class="input-group">
-                <label class="label">New Password</label>
-                <div class="input-group-icon">
-                  <i class="zmdi zmdi-email input-icon"></i>
-                  <input
-                    class="input--style-4 js-datepicker"
-                    type="text"
-                    name="birthday"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row row-space">
-            <div class="col-2">
-              <div class="input-group">
-                <label class="label">Confirm Password</label>
-                <div class="input-group-icon">
-                  <i class="zmdi zmdi-lock input-icon"></i>
-                  <input
-                    class="input--style-4 js-datepicker"
-                    type="text"
-                    name="birthday"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-t-15">
-            <a href="/login" class="btn btn--blue">
-              <!--            
-            <button
-              class="btn btn--radius-2 btn--blue"
-              data-toggle="modal"
-              data-target="#exampleModalCenter"
-              type="submit"
-            > -->
+            <h5 class="card-title text-center mb-5 fw-light fs-5">
               Change Password
-            </a>
-            <!-- </button> -->
-          </div>
+            </h5>
+            <form>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingInput"
+                />
+                <label for="floatingInput">Password</label>
+              </div>
 
-          <!-- <div id="example-3">
-  <button v-on:click="say('hi')">Say hi</button>
-  </div> -->
-        </form>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingInput"
+                />
+                <label for="floatingInput">Confirm Password</label>
+              </div>
+
+              <div class="d-grid">
+                <button
+                  class="btn btn-login text-uppercase fw-bold"
+                  type="submit"
+                >
+                  <a href="/login"> Change Password </a>
+                </button>
+                <hr class="my-4" />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -70,7 +56,21 @@ export default {
 
 
 <style scoped>
-@import "../../assets/base.css";
-@import "../../assets/LoginandSignup.css";
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  background-color: #f4c07a;
+}
+
+.btn-google {
+  color: white !important;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white !important;
+  background-color: #3b5998;
+}
 </style>
 

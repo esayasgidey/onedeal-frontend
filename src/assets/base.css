@@ -1,4 +1,4 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* color palette from <https://github.com/vuejs/theme>
 :root {
   margin-top: 0%;
   background: -webkit-gradient(linear, left bottom, left top, from(#F4C07A), to(#ffffff));
@@ -7,7 +7,7 @@
   background: -o-linear-gradient(top left, #F4C07A 60% , #ffffff 40%);
   background: linear-gradient(to top left, #F4C07A  60%, #ffffff 40%);
   
-}
+} */
 
 /* semantic color variables for this project */
 /* :root {
@@ -51,7 +51,7 @@
 
 body {
   /* padding-left: 250px; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* position: relative;
   color: var(--color-text);
   background: var(--color-background);
