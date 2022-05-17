@@ -1,9 +1,9 @@
 {
-    "name": "starter-template_vue-3-vite-bootstrap-5-with-icons",
-    "version": "0.9.5",
-    "description": "Boilerplate for Vue 3 with Vite and Bootstrap 5 with Icons",
+    "name": "OneDeal Frontend",
+    "version": "0.0.1",
+    "description": "One Deal Frontend",
     "license": "MIT",
-    "author": "how@errazib.com",
+    "author": "Esayas",
     "private": true,
     "scripts": {
         "dev": "vite",
